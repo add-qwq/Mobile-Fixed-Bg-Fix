@@ -7,11 +7,11 @@
 
 ### Mobile-Fixed-Bg-Fix
 
-A lightweight JavaScript solution to fix the common issue of `background-attachment: fixed` misbehaving on mobile devices due to dynamic viewport changes caused by browser toolbar auto-hide/show functionality.
+A lightweight JavaScript solution to fix the common issue of background-attachment: fixed misbehaving on mobile devices due to dynamic viewport changes caused by browser toolbar auto-hide/show functionality.
 
 ### Problem Background
 
-Mobile browsers often adjust their viewport height dynamically as users scroll - when toolbars (address bar, navigation bar) automatically hide or show during scrolling, the viewport height changes abruptly. This behavior causes significant display issues for background images using `background-attachment: fixed`, including:
+Mobile browsers often adjust their viewport height dynamically as users scroll - when toolbars (address bar, navigation bar) automatically hide or show during scrolling, the viewport height changes abruptly. This behavior causes significant display issues for background images using background-attachment: fixed, including:
 - Background image being cut off or stretched
 - Unexpected gaps appearing in the background
 - Jerky or inconsistent background positioning during scrolling
@@ -23,7 +23,7 @@ These issues have long plagued web developers using fixed background styles on m
 
 Mobile-Fixed-Bg-Fix provides a universal solution to this problem through intelligent detection and dynamic adjustment:
 - Automatically identifies mobile devices
-- Replaces native `background-attachment: fixed` with a more reliable fixed-position element implementation
+- Replaces native background-attachment: fixed with a more reliable fixed-position element implementation
 - Maintains original background styling (image, size, position, repeat)
 - Dynamically adjusts background height during viewport changes
 - Preserves the intended visual effect while ensuring consistent display across mobile browsers
@@ -39,9 +39,9 @@ Mobile-Fixed-Bg-Fix provides a universal solution to this problem through intell
 
 ### Usage
 
-1. **Include the Script**: Add the `mobile-fixed-bg-fix.js` file to your project
-2. **Integrate into Pages**: Include the script in your HTML pages, preferably before the closing `</body>` tag or in your JavaScript bundle
-3. **No Configuration Needed**: The script automatically initializes on `DOMContentLoaded` and works with existing `background-attachment: fixed` styles
+1. **Include the Script**: Add the mobile-fixed-bg-fix.js file to your project
+2. **Integrate into Pages**: Include the script in your HTML pages, preferably before the closing </body> tag or in your JavaScript bundle
+3. **No Configuration Needed**: The script automatically initializes on DOMContentLoaded and works with existing background-attachment: fixed styles
 
 ```html
 <!-- Example integration -->
@@ -51,12 +51,12 @@ Mobile-Fixed-Bg-Fix provides a universal solution to this problem through intell
 ### Implementation Principle
 
 1. **Mobile Detection**: The script first checks if the user is on a mobile device using a combination of viewport width (<768px) and user-agent pattern matching
-2. **Background Check**: It detects if the `<body>` element uses `background-attachment: fixed`
+2. **Background Check**: It detects if the <body> element uses background-attachment: fixed
 3. **Style Migration**: When a fixed background is found, it:
-   - Changes the body's background attachment to `scroll`
-   - Creates a new fixed-position element (`#fixed-background`)
+   - Changes the body's background attachment to scroll
+   - Creates a new fixed-position element (#fixed-background)
    - Copies all original background properties (image, size, position, repeat) to this new element
-4. **Dynamic Adjustment**: Listens for `scroll` and `resize` events to update the background element's height whenever the viewport changes significantly (>50px difference)
+4. **Dynamic Adjustment**: Listens for scroll and resize events to update the background element's height whenever the viewport changes significantly (>50px difference)
 5. **Initial Calibration**: Performs an initial height adjustment on page load to ensure proper display from the start
 
 ### Compatibility
@@ -83,11 +83,11 @@ This project is licensed under the [Apache-2.0 License](LICENSE).
 
 ### 项目介绍
 
-一款轻量级JavaScript解决方案，用于修复移动端浏览器中因工具栏自动隐藏/显示导致视口动态变化时，`background-attachment: fixed`背景图片出现的显示问题。
+一款轻量级JavaScript解决方案，用于修复移动端浏览器中因工具栏自动隐藏/显示导致视口动态变化时，background-attachment: fixed背景图片出现的显示问题。
 
 ### 问题背景
 
-移动端浏览器在用户滚动时，通常会动态调整视口高度——当工具栏（地址栏、导航栏）自动隐藏或显示时，视口高度会突然变化。这种行为会导致使用`background-attachment: fixed`的背景图片出现显示问题，包括：
+移动端浏览器在用户滚动时，通常会动态调整视口高度——当工具栏（地址栏、导航栏）自动隐藏或显示时，视口高度会突然变化。这种行为会导致使用background-attachment: fixed的背景图片出现显示问题，包括：
 - 背景图片被截断或拉伸
 - 背景中出现意外空白间隙
 - 滚动时背景定位抖动或不一致
@@ -99,7 +99,7 @@ This project is licensed under the [Apache-2.0 License](LICENSE).
 
 Mobile-Fixed-Bg-Fix通过智能检测和动态调整提供了通用解决方案：
 - 自动识别移动设备
-- 使用更可靠的固定定位元素替代原生`background-attachment: fixed`实现
+- 使用更可靠的固定定位元素替代原生background-attachment: fixed实现
 - 保留原始背景样式（图片、尺寸、位置、重复方式）
 - 在视口变化时动态调整背景高度
 - 在确保移动端显示一致性的同时，保留预期的视觉效果
@@ -115,9 +115,9 @@ Mobile-Fixed-Bg-Fix通过智能检测和动态调整提供了通用解决方案�
 
 ### 使用方法
 
-1. **引入脚本**：将`mobile-fixed-bg-fix.js`文件添加到你的项目中
-2. **集成到页面**：在HTML页面中引入脚本，建议放在`</body>`标签前或打包到JavaScript bundle中
-3. **无需配置**：脚本会在`DOMContentLoaded`事件触发时自动初始化，直接与现有`background-attachment: fixed`样式配合工作
+1. **引入脚本**：将mobile-fixed-bg-fix.js文件添加到你的项目中
+2. **集成到页面**：在HTML页面中引入脚本，建议放在</body>标签前或打包到JavaScript bundle中
+3. **无需配置**：脚本会在DOMContentLoaded事件触发时自动初始化，直接与现有background-attachment: fixed样式配合工作
 
 ```html
 <!-- 集成示例 -->
@@ -127,12 +127,12 @@ Mobile-Fixed-Bg-Fix通过智能检测和动态调整提供了通用解决方案�
 ### 实现原理
 
 1. **移动设备检测**：脚本首先通过视口宽度（<768px）和用户代理模式匹配的组合判断用户是否在移动设备上
-2. **背景检测**：检查`<body>`元素是否使用了`background-attachment: fixed`样式
+2. **背景检测**：检查<body>元素是否使用了background-attachment: fixed样式
 3. **样式迁移**：当检测到固定背景时，它会：
-   - 将body的背景附着方式改为`scroll`
-   - 创建新的固定定位元素（`#fixed-background`）
+   - 将body的背景附着方式改为scroll
+   - 创建新的固定定位元素（#fixed-background）
    - 将所有原始背景属性（图片、尺寸、位置、重复）复制到这个新元素
-4. **动态调整**：监听`scroll`和`resize`事件，当视口变化超过50px时更新背景元素高度
+4. **动态调整**：监听scroll和resize事件，当视口变化超过50px时更新背景元素高度
 5. **初始校准**：在页面加载时执行初始高度调整，确保从一开始就正确显示
 
 ### 兼容性
